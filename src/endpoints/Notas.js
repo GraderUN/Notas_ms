@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const url = process.env.url
 const mysqlConnection = require("../DBConnection/database");
 const logicaNotas = require("../BusinessLogic/LogicaNotas");
 

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="Adding all" />
+    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="Dockerfile update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBConnection/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnection/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/endpoints/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/endpoints/Notas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/Notas.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +77,7 @@
       <workItem from="1601388576213" duration="6524000" />
       <workItem from="1601591455015" duration="7748000" />
       <workItem from="1601672472882" duration="2987000" />
-      <workItem from="1601838044533" duration="5278000" />
+      <workItem from="1601838044533" duration="10354000" />
     </task>
     <task id="LOCAL-00001" summary="Adding all">
       <created>1601842105531</created>
@@ -86,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601843762632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dockerfile update">
+      <created>1601844626789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601844626789</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,7 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding all" />
+    <MESSAGE value="Dockerfile update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601841226938">
@@ -102,10 +117,10 @@
     </state>
     <state x="364" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601841226938" />
     <state x="486" y="276" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601265103108" />
-    <state x="1091" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601839507303">
+    <state x="1091" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601848919339">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1091" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601839507303" />
+    <state x="1091" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601848919339" />
     <state x="823" y="275" key="FileChooserDialogImpl" timestamp="1601841351889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -124,27 +139,28 @@
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601841702375" />
     <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601197064727" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601843911391">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601844629080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601843911391" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601844629080" />
     <state x="570" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595411321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="570" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601595411321" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601843856741">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601844639981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601843856741" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601844639981" />
     <state x="1115" y="238" width="478" height="1047" key="dock-window-1" timestamp="1601594915921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1115" y="238" width="478" height="1047" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601594915921" />
     <state x="3369" y="0" width="478" height="1047" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601591884107" />
     <state x="1449" y="0" width="478" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1601420664031" />
-    <state x="2587" y="52" width="585" height="936" key="find.popup" timestamp="1601352913276">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="545" y="91" width="585" height="936" key="find.popup" timestamp="1601845955706">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="545" y="91" width="585" height="936" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601845955706" />
     <state x="2587" y="52" width="585" height="936" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601352913276" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1601841361573">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -79,20 +79,20 @@ async function promedioCurso(cursoId) {
 }
 
 //Funcion para calcular el promedio de un curso teniendo ID, devuelve promedio del curso
-async function estadisticasCurso(cursoId) {
+async function estadisticasCurso(listaEst) {
     return new Promise((resolve => {
         let suma = 0;
         let arr = [];
         let estadisticas = [];
-        let estudiantes = [11111111,1074187055,1074187189,1074187999]
+        let estudiantes = listaEst.id_students;
+        console.log(estudiantes);
         for (let i = 0; i < estudiantes.length; i++) {
             arr.push(promedioEstudiante(estudiantes[i]));
         }
         Promise.all(arr).then(messages => {
             messages.sort();
-            estadisticas[0] = {"UltimoPuesto": messages[0]};
-            estadisticas[1] = {"PrimerPuesto": messages[messages.length - 1]}
-            resolve(estadisticas);
+            estadisticas[0] = {"UltimoPuesto": messages[0], "PrimerPuesto": messages[messages.length - 1]};
+            resolve(estadisticas[0]);
         })
     }))
 }

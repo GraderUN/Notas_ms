@@ -105,7 +105,8 @@ router.get('/promedioCurso/:cursoId', (req
 router.get('/estadisticasCurso/:cursoId', (req
     , res) => {
     const notas = req.params;
-    logicaNotas.estadisticasCurso(req.params.cursoId).then(response => {
+    const listaEst = req.body;
+    logicaNotas.estadisticasCurso(listaEst).then(response => {
         res.json(response);
     }).catch("NADA QUE LLEGA");
 })

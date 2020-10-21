@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const url = process.env.url
+
 const mysqlConnection = require("../DBConnection/database");
 const logicaNotas = require("../BusinessLogic/LogicaNotas");
 
@@ -15,70 +15,36 @@ router.get("/", (req, res) => {
     })
 })
 
-//Devuelve
-router.get('/notasMateriaPeriodo/:estudianteId/:notasIdMateria/:notasPeriodo', (req
-                                                                                , res) => {
-    const notasMateriaPeriodo = req.params;
-    console.log(notasMateriaPeriodo)
-    mysqlConnection.query("SELECT notasValor,notasPeriodo FROM tablaNotas INNER JOIN tablaCursoXEstudiante on " +
-        "notasIdCursoEstudiante=cursoXEstudianteId INNER JOIN tablaEstudiante on " +
-        "cursoXEstudianteIdEstudiante=estudianteId  WHERE estudianteId= ? AND  notasIdMateria= ? AND " +
-        "notasPeriodo= ?;", [notasMateriaPeriodo.estudianteId, notasMateriaPeriodo.notasIdMateria,
-            notasMateriaPeriodo.notasPeriodo ], (err, rows, fields) => {
-        if (!err) {
-            console.log(rows)
-            res.json(rows);
-        } else {
-            console.log(err);
-        }
-    })
-})
-
-router.get('/notasPeriodosAnteriores/:estudianteId/:notasIdMateria', (req,
-                                                                      res) => {
-    const notasMateriaPeriodo = req.params;
-    console.log(notasMateriaPeriodo)
-    mysqlConnection.query("SELECT notasValor,notasPeriodo FROM tablaNotas INNER JOIN tablaCursoXEstudiante on " +
-        "notasIdCursoEstudiante=cursoXEstudianteId INNER JOIN tablaEstudiante on " +
-        "cursoXEstudianteIdEstudiante=estudianteId  WHERE estudianteId= ? AND  notasIdMateria= ?;",
-        [notasMateriaPeriodo.estudianteId, notasMateriaPeriodo.notasIdMateria],
-        (err, rows, fields) => {
-        if (!err) {
-            res.json(rows);
-        } else {
-            console.log(err);
-        }
-    })
-})
-
-router.get('/promedioMateriaPeriodo/:estudianteId/:notasIdMateria/:notasPeriodo', (req
+//Devuelve el notas del estudiante dando el estudianteId, el cursoId y el periodo
+router.get('/notasEstudianteClasePeriodo/:estudianteId/:claseId/:periodo', (req
     , res) => {
-    const notasMateriaPeriodo = req.params;
-    mysqlConnection.query("SELECT notasValor,notasPorcentaje FROM tablaNotas INNER JOIN tablaCursoXEstudiante on " +
-        "notasIdCursoEstudiante=cursoXEstudianteId INNER JOIN tablaEstudiante on " +
-        "cursoXEstudianteIdEstudiante=estudianteId  WHERE estudianteId= ? AND  notasIdMateria= ? AND " +
-        "notasPeriodo= ?;", [notasMateriaPeriodo.estudianteId, notasMateriaPeriodo.notasIdMateria,
-        notasMateriaPeriodo.notasPeriodo], (err, rows, fields) => {
-        if (!err) {
-            res.json(logicaNotas.promedioEstudiantePeriodoMateria(rows));
-        } else {
-            console.log(err);
-        }
-    })
+    logicaNotas.notasEstudianteClasePeriodo(req.params.estudianteId, req.params.claseId, req.params.periodo,)
+        .then(response => {
+            res.json(response);
+        }).catch("NADA QUE LLEGA");
+})
+
+//Devuelve el notas del estudiante dando el estudianteId y el cursoId
+router.get('/notasEstudianteClase/:estudianteId/:claseId', (req
+    , res) => {
+    logicaNotas.notasEstudianteClase(req.params.estudianteId, req.params.claseId,)
+        .then(response => {
+            res.json(response);
+        }).catch("NADA QUE LLEGA");
 })
 
 //Devuelve el promedio del estudiante dando el periodo, la materia y el ID
-router.get('/promedioEstudianteMateriaPeriodo/:estudianteId/:notasIdMateria/:notasPeriodo', (req
+router.get('/promedioEstudianteMateriaPeriodo/:estudianteId/:claseId/:periodo', (req
     , res) => {
     const notas = req.params;
-    logicaNotas.promedioEstudiantePeriodoMateria(req.params.estudianteId, req.params.notasPeriodo,
-        req.params.notasIdMateria).then(response => {
+    logicaNotas.promedioEstudiantePeriodoMateria(req.params.estudianteId, req.params.notasIdMateria,
+        req.params.periodo,).then(response => {
         res.json(response);
     }).catch("NADA QUE LLEGA");
 })
 
 //Devuelve el promedio del estudiante en un periodo específico en una materia
-router.get('/promedioEstudianteMateria/:estudianteId/:notasIdMateria', (req
+router.get('/promedioEstudianteMateria/:estudianteId/:claseId', (req
     , res) => {
     logicaNotas.promedioEstudianteMateria(req.params.estudianteId, req.params.notasIdMateria).then(response => {
         res.json(response);

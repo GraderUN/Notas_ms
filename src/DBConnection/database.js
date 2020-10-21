@@ -1,11 +1,11 @@
 const mysql = require('mysql')
 
 const mysqlConnection = mysql.createConnection({
-    host: 'gradernotasdb.crp3hkghifbm.us-east-1.rds.amazonaws.com',
+    host: 'gradernotasdb.cmn2d1zxgm1q.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'admin',
     password: process.env.pass,
-    database: 'graderNotasDB'
+    database: 'graderNotasDb'
 })
 
 mysqlConnection.connect(function (err){

@@ -1,19 +1,51 @@
 const express = require('express');
-const router = express.Router();
 const mysqlConnection = require("../DBConnection/database");
 
-//Funcion para calcular el promedio de un estudiante teniendo ID, periodo y materia, devuelve promedio materia periodo
-async function promedioEstudianteMateriaPeriodo(estudianteId, periodo, IdMateria) {
+
+//Funcion obtener notas de un estudiante en una clase y un periodo
+async function notasEstudianteClasePeriodo(estudianteId, claseId, periodo) {
     return new Promise((resolve => {
-        mysqlConnection.query("SELECT notasValor,notasPorcentaje FROM tablaNotas INNER JOIN " +
-            "tablaCursoXEstudiante on notasIdCursoEstudiante=cursoXEstudianteId INNER JOIN tablaEstudiante on " +
-            "cursoXEstudianteIdEstudiante=estudianteId  WHERE estudianteId= ? AND  notasIdMateria= ? AND " +
-            "notasPeriodo= ?;", [estudianteId, IdMateria,
+        mysqlConnection.query("SELECT * FROM tablaNotas INNER JOIN tablaTipoNotas on tipoNotasId=tipoNotasIdClase" +
+            " WHERE notasIdEstudiante= ? AND  tipoNotasIdClase= ? AND notasPeriodo= ?;", [estudianteId, claseId,
             periodo], (err, rows, fields) => {
+            let notas;
+            if (!err) {
+                notas = JSON.parse(JSON.stringify(rows));
+                resolve(notas);
+            } else {
+                console.log(err);
+            }
+        })
+    }))
+}
+
+//Funcion obtener notas de un estudiante en una clase en todos los periodos
+async function notasEstudianteClase(estudianteId, claseId) {
+    return new Promise((resolve => {
+        let arr = [];
+        for (let i = 1; i <= 5; i++) {
+            arr.push(notasEstudianteClasePeriodo(estudianteId, claseId, i));
+            console.log("entra")
+        }
+        Promise.all(arr).then(messages => {
+                resolve(messages);
+            }
+        )
+    }))
+}
+
+
+//Funcion para calcular el promedio de un estudiante teniendo ID, periodo y materia, devuelve promedio materia periodo
+async function promedioEstudianteMateriaPeriodo(estudianteId, claseId, periodo) {
+    return new Promise((resolve => {
+        mysqlConnection.query("SELECT * FROM tablaNotas INNER JOIN tablaTipoNotas on notastipoNotasId=tipoNotasId" +
+            " WHERE notasIdEstudiante= ? AND  tipoNotasId= ? AND notasPeriodo= ?;", [estudianteId, claseId,
+            periodo], (err, rows, fields) => {
+            let notas;
             if (!err) {
                 notas = JSON.parse(JSON.stringify(rows));
                 let sum = 0;
-                for (i = 0; i < notas.length; i++) {
+                for (let i = 0; i < notas.length; i++) {
                     sum = sum + notas[i].notasValor * (notas[i].notasPorcentaje / 100);
                 }
                 resolve(sum);
@@ -25,12 +57,12 @@ async function promedioEstudianteMateriaPeriodo(estudianteId, periodo, IdMateria
 }
 
 //Funcion para calcular el promedio en un periodo de un estudiante teniendo ID y materia, devuelve promedio materia
-async function promedioEstudianteMateria(estudianteId, idMateria) {
+async function promedioEstudianteMateria(estudianteId, claseId) {
     return new Promise((resolve => {
         let suma = 0;
         let arr = [];
         for (let i = 1; i < 5; i++) {
-            arr.push(promedioEstudianteMateriaPeriodo(estudianteId, i, idMateria));
+            arr.push(promedioEstudianteMateriaPeriodo(estudianteId, claseId, i));
         }
         Promise.all(arr).then(messages => {
             for(let j = 0; j < messages.length; j ++){
@@ -98,40 +130,6 @@ async function estadisticasCurso(listaEst) {
 }
 
 
-//function PromedioEstudianteMateria(req,res) {11
-//    let suma = 0;
-//    let average = [];
-//    const notasMateriaPeriodo = req.params;
-//    mysqlConnection.query("SELECT notasValor,notasPorcentaje, notasPeriodo FROM tablaNotas INNER JOIN tablaCursoXEstudiante on " +
-//        "notasIdCursoEstudiante=cursoXEstudianteId INNER JOIN tablaEstudiante on " +
-//        "cursoXEstudianteIdEstudiante=estudianteId  WHERE estudianteId= ? AND  notasIdMateria= ?",
-//        [notasMateriaPeriodo.estudianteId, notasMateriaPeriodo.notasIdMateria, periodo], (err, rows, fields) => {
-//        if (!err) {
-//            notas = JSON.parse(JSON.stringify(rows));
-//            let sum = 0;
-//            let average = [-1];
-//            for (i = 1; i < 5; i++) {
-//                for (j = 0; j < notas.length; j++) {
-//                    sum = sum + notas[i].notasValor * (notas[i].notasPorcentaje / 100);
-//                }
-//            }
-//            average[0] = {"promedio": sum};
-//            console.log(average)
-//            return average;
-//        } else {
-//            console.log(err);
-//        }
-//    })
-//
-//    for (i = 1; i < 5; i++) {
-//
-//        suma = suma + PromedioEstudiantePeriodoMateria(req,res,i)
-//    }
-//    suma = suma/4;
-//    average[0] = {"promedio": suma};
-//    res.json(average);
-//}
-//Promedio de un estudiante en un periodo con materia
 function Promedio(notas) {
     let periodo = [1, 2, 3, 4], array = [];
     for (i = 0; i < periodo.length; i++) {
@@ -140,6 +138,6 @@ function Promedio(notas) {
 }
 
 module.exports = {
-    promedioEstudiantePeriodoMateria: promedioEstudianteMateriaPeriodo, promedioEstudianteMateria, promedioEstudiante,
-    promedioCurso, estadisticasCurso
+    promedioEstudiantePeriodoMateria: promedioEstudianteMateriaPeriodo, promedioEstudianteMateria,
+    promedioEstudiante, promedioCurso, estadisticasCurso, notasEstudianteClasePeriodo, notasEstudianteClase
 }

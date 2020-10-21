@@ -1,10 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 
-const pool = require('../DBConnection/database')
 /*
 app.get('/GetTablaNotas', async (req, res) =>{
     try {
@@ -51,5 +49,5 @@ app.use(express.json());
 app.use(require("./Notas"))
 
 app.listen(app.get("port"), () => {
-    console.log('Server on port', app.get("port"));
+    console.log('Server on port http://localhost:3000', app.get("port"));
 })

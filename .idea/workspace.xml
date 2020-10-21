@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="Notas Estudiante clase (periodo) methods working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBConnection/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnection/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/endpoints/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/endpoints/Notas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/endpoints/Notas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dotenv/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dotenv/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +102,7 @@
       <workItem from="1602469588260" duration="4977000" />
       <workItem from="1603138651186" duration="3601000" />
       <workItem from="1603224388572" duration="8628000" />
+      <workItem from="1603243426895" duration="428000" />
     </task>
     <task id="LOCAL-00001" summary="Adding all">
       <created>1601842105531</created>
@@ -183,10 +182,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1091" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601848919339" />
-    <state x="823" y="275" key="FileChooserDialogImpl" timestamp="1602476625040">
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603240480096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602476625040" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240480096" />
+    <state x="823" y="275" key="FileChooserDialogImpl" timestamp="1603240584135">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240584135" />
     <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601265074332" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1601841380288">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -201,10 +204,10 @@
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601841702375" />
     <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601197064727" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603138933681">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603240447299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603138933681" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240447299" />
     <state x="570" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595411321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

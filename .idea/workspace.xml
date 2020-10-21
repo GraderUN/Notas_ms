@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="Notas Estudiante clase (periodo) methods working">
+    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/dotenv/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dotenv/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Arqui/web-frontend" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
@@ -102,7 +101,7 @@
       <workItem from="1602469588260" duration="4977000" />
       <workItem from="1603138651186" duration="3601000" />
       <workItem from="1603224388572" duration="8628000" />
-      <workItem from="1603243426895" duration="428000" />
+      <workItem from="1603243426895" duration="4969000" />
     </task>
     <task id="LOCAL-00001" summary="Adding all">
       <created>1601842105531</created>
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602478598965</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="env">
+      <created>1603243910478</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603243910478</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +176,8 @@
     <MESSAGE value="gitignore, env variables" />
     <MESSAGE value="Estadisticas curso body receive" />
     <MESSAGE value="Notas Estudiante clase (periodo) methods working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notas Estudiante clase (periodo) methods working" />
+    <MESSAGE value="env" />
+    <option name="LAST_COMMIT_MESSAGE" value="env" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601841226938">
@@ -186,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240480096" />
-    <state x="823" y="275" key="FileChooserDialogImpl" timestamp="1603240584135">
+    <state x="823" y="275" key="FileChooserDialogImpl" timestamp="1603249491247">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240584135" />
+    <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603249491247" />
     <state x="823" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601265074332" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1601841380288">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -204,10 +211,10 @@
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601841702375" />
     <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601197064727" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603240447299">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603243912863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603240447299" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603243912863" />
     <state x="570" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595411321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

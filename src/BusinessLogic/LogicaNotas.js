@@ -23,12 +23,15 @@ async function notasEstudianteClasePeriodo(estudianteId, claseId, periodo) {
 async function notasEstudianteClase(estudianteId, claseId) {
     return new Promise((resolve => {
         let arr = [];
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i < 5; i++) {
             arr.push(notasEstudianteClasePeriodo(estudianteId, claseId, i));
-            console.log("entra")
         }
         Promise.all(arr).then(messages => {
-                resolve(messages);
+            let arr2 = [];
+            for(let i=0; i<messages.length; i++){
+                arr2=arr2.concat(messages[i]);
+            }
+                resolve(arr2);
             }
         )
     }))

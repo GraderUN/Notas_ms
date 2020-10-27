@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="env">
+    <list default="true" id="64e2fdaf-654a-4b4b-84b9-2e68a37f5134" name="Default Changelist" comment="notasEstuidanteClase fixed array">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/LogicaNotas.js" afterDir="false" />
     </list>
@@ -54,7 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Arqui/web-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
@@ -101,7 +101,8 @@
       <workItem from="1602469588260" duration="4977000" />
       <workItem from="1603138651186" duration="3601000" />
       <workItem from="1603224388572" duration="8628000" />
-      <workItem from="1603243426895" duration="4969000" />
+      <workItem from="1603243426895" duration="5673000" />
+      <workItem from="1603773386780" duration="1348000" />
     </task>
     <task id="LOCAL-00001" summary="Adding all">
       <created>1601842105531</created>
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603243910478</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="notasEstuidanteClase fixed array">
+      <created>1603264691683</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603264691683</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +185,8 @@
     <MESSAGE value="Estadisticas curso body receive" />
     <MESSAGE value="Notas Estudiante clase (periodo) methods working" />
     <MESSAGE value="env" />
-    <option name="LAST_COMMIT_MESSAGE" value="env" />
+    <MESSAGE value="notasEstuidanteClase fixed array" />
+    <option name="LAST_COMMIT_MESSAGE" value="notasEstuidanteClase fixed array" />
   </component>
   <component name="WindowStateProjectService">
     <state x="364" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601841226938">
@@ -211,10 +220,10 @@
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601841702375" />
     <state x="2381" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601197064727" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603243912863">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603264695657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603243912863" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603264695657" />
     <state x="570" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601595411321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -229,10 +238,10 @@
     <state x="1115" y="238" width="478" height="1047" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601594915921" />
     <state x="3369" y="0" width="478" height="1047" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601591884107" />
     <state x="1449" y="0" width="478" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1601420664031" />
-    <state x="545" y="91" width="585" height="936" key="find.popup" timestamp="1603234122353">
+    <state x="545" y="91" width="585" height="936" key="find.popup" timestamp="1603774095643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="545" y="91" width="585" height="936" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603234122353" />
+    <state x="545" y="91" width="585" height="936" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603774095643" />
     <state x="2587" y="52" width="585" height="936" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601352913276" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1601841361573">
       <screen x="0" y="0" width="1920" height="1040" />

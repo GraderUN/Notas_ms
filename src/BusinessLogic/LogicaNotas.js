@@ -5,7 +5,7 @@ const mysqlConnection = require("../DBConnection/database");
 //Funcion obtener notas de un estudiante en una clase y un periodo
 async function notasEstudianteClasePeriodo(estudianteId, claseId, periodo) {
     return new Promise((resolve => {
-        mysqlConnection.query("SELECT * FROM tablaNotas INNER JOIN tablaTipoNotas on tipoNotasId=tipoNotasIdClase" +
+        mysqlConnection.query("SELECT * FROM tablaNotas INNER JOIN tablaTipoNotas on tipoNotasId=notastipoNotasId" +
             " WHERE notasIdEstudiante= ? AND  tipoNotasIdClase= ? AND notasPeriodo= ?;", [estudianteId, claseId,
             periodo], (err, rows, fields) => {
             let notas;
